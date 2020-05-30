@@ -46,6 +46,9 @@ function TiMu(){
 	var timu_id = 0
 	var select1 = 1
 	var frame_left = 0
+	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0}
+	// 答案
+	var right = {"0":1,"1":4,"2":1,"3":4,"4":1}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -53,17 +56,98 @@ function TiMu(){
 			if(timu_id < document.querySelectorAll(".entrance-bottom-frame-line").length - 1){
 				frame_left += -100
 				document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
-				
+				anwser[timu_id] = $(this).index()
 				timu_id++;
 				select1++;
 				document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 				addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
-				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)
+				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)				
 			}else{
-				alert("最后一道题啦")
+				anwser[timu_id] = $(this).index()
+			}
+			$(".selected").removeClass("selected")
+			if(anwser[timu_id] != 0){
+				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(anwser[timu_id]-1).addClass("selected")
+			}
+			if($(".submit").hasClass("submited")){
+				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
 			}
 		}
 	}
+	document.querySelector(".pre").onclick = function(){
+		if(timu_id > 0){
+			frame_left += 100
+			document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
+			timu_id--;
+			select1--;
+			document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
+			addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
+			if(anwser[timu_id] != 0){
+				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(anwser[timu_id]-1).addClass("selected")
+			}
+			removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id + 1], active)
+			if($(".submit").hasClass("submited")){
+				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
+			}
+		}
+	}
+	
+	document.querySelector(".next").onclick = function(){
+		if(timu_id < 4){
+			frame_left += -100
+			document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
+			
+			timu_id++;
+			select1++;
+			document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
+			addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
+			if(anwser[timu_id] != 0){
+				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(anwser[timu_id]-1).addClass("selected")
+			}
+			removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id - 1], active)
+			if($(".submit").hasClass("submited")){
+				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
+			}
+		}
+	}
+	
+	$(".submit").bind("click",function(){
+		if($(this).hasClass("submited")){
+			$.alertView("不能再交啦！你已经交过卷了！");
+			return false;
+		}
+		let score = 100
+		var flag = false
+		for(let i in anwser){
+			if(anwser[i] == 0){
+				flag = true
+			}
+			if(anwser[i] != right[i]){
+				score = score - 20;
+			}
+		}
+		if(flag){
+			$.alertView("栗子，还有空着的哦！");
+			return false;
+		}
+		if(score == 100){
+			$.alertView("真是太棒了，100分！");
+			$('body').fireworks({ 
+				  sound: true, // sound effect
+				  opacity: 0.9, 
+				  width: '100%', 
+				  height: '100%' 
+			});
+		}else if(score >= 60){
+			$.alertView("离100就差一点点！");
+		}else if(score < 60){
+			$.alertView("加油");
+		}
+		$(".submit").addClass("submited")
+		if($(".submit").hasClass("submited")){
+				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
+			}
+	});
 }
 
 function addClass(obj, cls){
@@ -97,54 +181,54 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "1. 众所周知我们所处的宇宙的质能公式是E=mc2，其中c是真空中的光速，和我们的宇宙平行的另一个宇宙meta，研究显示他们使用的质能公式是E=(2+√3)m，当一个物体质量m很大的时候，对应的能量E非常大，数据也非常的长，但meta宇宙里面的智慧生物只愿意把E取整，然后记录对应的能量E的最后一位整数，比如m=0时，他们会记录1，m=1时，他们会记录3。m=2的时候，他们会记录3。现在请问当m=100时，他们会记录多少？",  
+             "title": "My respect to your family is very sincere. 的sincere（）",  
             
              "xuanxiang":[
-             				"String",
-             				"int",
-             				"char",
-             				"void",
+             				"真诚的，真挚的",
+             				"真实",
+             				"有力的，肌肉发达的",
+             				"因为，由于",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "编译和运行下面代码时显示的结果是（）",  
+             "title": "senate（）",  
             
              "xuanxiang":[
-             				"打开当前目录下的文件2.txt，既可以向文件写数据，也可以从文件读数据",
-             				"ClassCastException",
-             				"FileNotFoundException",
-             				"IndexOutOfBoundsException",
+             				"邮寄",
+             				"参议院",
+             				"感觉",
+             				"参议员",
              				]
         },{  
              "id" : "3",  
-             "title": "编译和运行下面代码时显示的结果是（）",  
+             "title": "supreme（）",  
             
              "xuanxiang":[
-             				"打开当前目录下的文件2.txt，既可以向文件写数据，也可以从文件读数据",
-             				"ClassCastException",
-             				"FileNotFoundException",
-             				"IndexOutOfBoundsException",
+             				"最高的，极度的",
+             				"一定成功的",
+             				"确信的",
+             				"超越",
              				]
         },{  
              "id" : "4",  
-             "title": "编译和运行下面代码时显示的结果是（）",  
+             "title": "intermediate（）",  
             
              "xuanxiang":[
-             				"打开当前目录下的文件2.txt，既可以向文件写数据，也可以从文件读数据",
-             				"ClassCastException",
-             				"FileNotFoundException",
-             				"IndexOutOfBoundsException",
+             				"立刻的",
+             				"打断",
+             				"综合的",
+             				"中间的，中级的",
              				]
         },{  
              "id" : "5",  
-             "title": "编译和运行下面代码时显示的结果是（）",  
+             "title": "under no circumstances 的 circumstances（）",  
              
              "xuanxiang":[
-             				"打开当前目录下的文件2.txt，既可以向文件写数据，也可以从文件读数据",
-             				"ClassCastException",
-             				"FileNotFoundException",
-             				"IndexOutOfBoundsException",
+             				"情况，条件",
+             				"既然",
+             				"决不",
+             				"树枝",
              				]
         }
         ];
