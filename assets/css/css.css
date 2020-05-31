@@ -3,11 +3,11 @@
 html,body{height:100%;}
 
 /*topic页面*/
-.topic{position: relative;overflow-y:auto;width: 100%;background-attachment:fixed;box-sizing: border-box;}
+.topic{position: relative;overflow-y:auto;width: 100%;background-attachment:fixed;box-sizing: border-box;height: inherit;}
 
 .topic-frameli{text-align: center;line-height: 1.5rem;font-size: 0.36rem;width: 5.65rem;height: 1.3rem;margin: 0.15rem auto 0.6rem auto;color: #000000;background-size: cover;}
 .topic-frameli div{display: inline-block;font-size: 0.54rem;color: #fbb561;}
-.entrance-bottom{width: 100%;position: relative;z-index: 10;height:-webkit-fill-available;overflow-x: hidden;}
+.entrance-bottom{width: 100%;position: relative;z-index: 10;height: auto;;overflow-x: hidden;}
 .entrance-bottom-frame{transition: all 0.5s;width: 10000%;margin: 0 auto;margin-top:0.3rem;}
 .entrance-bottom-frame-beijing{position: absolute;z-index: 1;width: 100%;height: 100%;top:0;left: 0;background: url(../img/evaluating/yincang.png);background-size:cover;}
 .entrance-bottom-frame-line{transition: all 0.5s;pointer-events: none;cursor: default;width: 1%;float: left;position: relative;padding: 0 0.35rem;box-sizing: border-box;}
@@ -54,7 +54,11 @@ html,body{height:100%;}
     background: #4CAF50;
 }
 
-.holder{height: 100%;background: url(../image/2.jpg);}
+.holder{
+	height: 100%;
+	background: url(../image/2.jpg) no-repeat;
+    background-size: cover;
+}
 
 #fireworksField{
 	z-index:1000;
