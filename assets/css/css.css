@@ -54,6 +54,8 @@ html,body{height:100%;}
     background: #4CAF50;
 }
 
+.holder{height: 100%;}
+
 #fireworksField{
 	z-index:1000;
 	width: 100%;
