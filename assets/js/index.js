@@ -48,7 +48,7 @@ function TiMu(){
 	var frame_left = 0
 	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0}
 	// 答案
-	var right = {"0":1,"1":4,"2":1,"3":4,"4":1}
+	var right = {"0":1,"1":2,"2":3,"3":4,"4":4}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -181,54 +181,54 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "My respect to your family is very sincere. 的sincere（）",  
+             "title": "They saw first a cloud of dust and then the car that was stirring it up.的stir up（）",  
             
              "xuanxiang":[
-             				"真诚的，真挚的",
-             				"真实",
-             				"有力的，肌肉发达的",
-             				"因为，由于",
+             				"扬起，挑起",
+             				"搅拌",
+             				"刺，戳",
+             				"发动",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "senate（）",  
+             "title": "frown（）",  
             
              "xuanxiang":[
-             				"邮寄",
-             				"参议院",
-             				"感觉",
-             				"参议员",
+             				"褐色的",
+             				"皱眉",
+             				"女装",
+             				"大佬",
              				]
         },{  
              "id" : "3",  
-             "title": "supreme（）",  
+             "title": "comprehensive（）",  
             
              "xuanxiang":[
-             				"最高的，极度的",
-             				"一定成功的",
-             				"确信的",
-             				"超越",
+             				"综合保险",
+             				"理解",
+             				"广泛的，综合的",
+             				"压缩的",
              				]
         },{  
              "id" : "4",  
-             "title": "intermediate（）",  
+             "title": "slim（）",  
             
              "xuanxiang":[
-             				"立刻的",
-             				"打断",
-             				"综合的",
-             				"中间的，中级的",
+             				"槽",
+             				"薄片，菜刀",
+             				"滑，滑落",
+             				"苗条的，(机会)少的",
              				]
         },{  
              "id" : "5",  
-             "title": "under no circumstances 的 circumstances（）",  
+             "title": "in proportion to（）",  
              
              "xuanxiang":[
-             				"情况，条件",
-             				"既然",
-             				"决不",
-             				"树枝",
+             				"均衡",
+             				"由于,
+             				"以...为目的",
+             				"与...成比例",
              				]
         }
         ];
