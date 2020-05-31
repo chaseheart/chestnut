@@ -3,7 +3,7 @@
 html,body{height:100%;}
 
 /*topic页面*/
-.topic{position: relative;height: 100%;overflow-y:auto;width: 100%;background-attachment:fixed;box-sizing: border-box;}
+.topic{position: relative;overflow-y:auto;width: 100%;background-attachment:fixed;box-sizing: border-box;}
 
 .topic-frameli{text-align: center;line-height: 1.5rem;font-size: 0.36rem;width: 5.65rem;height: 1.3rem;margin: 0.15rem auto 0.6rem auto;color: #000000;background-size: cover;}
 .topic-frameli div{display: inline-block;font-size: 0.54rem;color: #fbb561;}
