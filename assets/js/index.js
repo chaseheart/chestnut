@@ -132,7 +132,7 @@ function TiMu(){
 		}
 		if(score == 100){
 			$.alertView("真是太棒了，100分！");
-			$('body').fireworks({ 
+			$('.holder').fireworks({ 
 				  sound: true, // sound effect
 				  opacity: 0.9, 
 				  width: '100%', 
