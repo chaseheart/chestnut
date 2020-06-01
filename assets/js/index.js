@@ -48,7 +48,7 @@ function TiMu(){
 	var frame_left = 0
 	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0}
 	// 答案
-	var right = {"0":1,"1":2,"2":3,"3":4,"4":4}
+	var right = {"0":2,"1":1,"2":3,"3":1,"4":4}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -181,54 +181,54 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "They saw first a cloud of dust and then the car that was stirring it up.的stir up（）",  
+             "title": "The attitudes many of these young people had developed were both cautious and illiberal.的cautious（）",  
             
              "xuanxiang":[
-             				"扬起，挑起",
-             				"搅拌",
-             				"刺，戳",
-             				"发动",
+             				"自由的",
+             				"谨慎的",
+             				"骑士",
+             				"洞穴",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "frown（）",  
+             "title": "prayer以下哪个解释是正确的",  
             
              "xuanxiang":[
-             				"褐色的",
-             				"皱眉",
-             				"女装",
-             				"大佬",
+             				"a solemn request for help or expression of thanks addressed to God or an object of worship.",
+             				"ask (someone) earnestly or humbly for something.",
+             				"say something in order to obtain an answer or some information.",
+             				"an act of asking politely or formally for something.",
              				]
         },{  
              "id" : "3",  
-             "title": "comprehensive（）",  
+             "title": "stem from（）",  
             
              "xuanxiang":[
-             				"综合保险",
-             				"理解",
-             				"广泛的，综合的",
-             				"压缩的",
+             				"受益于",
+             				"从...推断出",
+             				"起源于",
+             				"从...听说",
              				]
         },{  
              "id" : "4",  
-             "title": "slim（）",  
+             "title": "accelerate（）",  
             
              "xuanxiang":[
-             				"槽",
-             				"薄片，菜刀",
-             				"滑，滑落",
-             				"苗条的，(机会)少的",
+             				"加快",
+             				"促进的",
+             				"油门",
+             				"可接受的",
              				]
         },{  
              "id" : "5",  
-             "title": "in proportion to（）",  
+             "title": "consume with（）",  
              
              "xuanxiang":[
-             				"均衡",
-             				"由于",
-             				"以...为目的",
-             				"与...成比例",
+             				"一起花",
+             				"随身带着钱",
+             				"用...来消费",
+             				"使着迷",
              				]
         }
         ];
