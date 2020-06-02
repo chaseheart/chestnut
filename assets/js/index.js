@@ -1,4 +1,5 @@
 function TiMu(){
+	var timu = 0
 	for(var i in data1){
 		var div = document.createElement("div");
 		div.className = "entrance-bottom-frame-line";
@@ -9,12 +10,14 @@ function TiMu(){
 		div2.className = "entrance-bottom-frame-line-title";
 		div2.innerHTML = data1[i].title;
 		document.querySelectorAll(".entrance-bottom-frame-line")[i].appendChild(div2);
-			
+		
+		if(data1[i].type == "input"){
+			$(".entrance-bottom-frame-line-title").eq(i).append("<input class='blank' id='" + data1[i].id + "'/>");
+		}
 		
 		var divli1 = document.createElement("div");
 		divli1.innerHTML = parseInt(i) + 1;
 		
-		var timu = 1
 		for(var j in data1[i].xuanxiang){
 			var div3 = document.createElement("div");
 			div3.className = "entrance-bottom-frame-line-button";
@@ -35,8 +38,8 @@ function TiMu(){
 			div3.appendChild(div3_id)
 			div3.appendChild(div4);
 			document.querySelectorAll(".entrance-bottom-frame-line")[i].appendChild(div3);
-			timu++
 		}
+		timu++
 	}
 	mintime = 1; 
 	var dact = document.querySelector(".entrance-bottom-frame-line")
@@ -46,9 +49,10 @@ function TiMu(){
 	var timu_id = 0
 	var select1 = 1
 	var frame_left = 0
-	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0}
+	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":5}
 	// 答案
-	var right = {"0":2,"1":1,"2":3,"3":1,"4":4}
+	var right = {"0":2,"1":1,"2":1,"3":3,"4":1,"5":4,"6":4,"7":4,"8":4,"9":0}
+	var strRight = {"9":"立方,正方"}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -93,7 +97,7 @@ function TiMu(){
 	}
 	
 	document.querySelector(".next").onclick = function(){
-		if(timu_id < 4){
+		if(timu_id < 9){
 			frame_left += -100
 			document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 			
@@ -122,8 +126,21 @@ function TiMu(){
 			if(anwser[i] == 0){
 				flag = true
 			}
-			if(anwser[i] != right[i]){
-				score = score - 20;
+			if(anwser[i] != right[i] && anwser[i] != 5){
+				score = score - 10;
+			}else if(anwser[i] == 5){
+				let str = $("#" + (parseInt(i) + 1)).val();
+				let arr = strRight[i].split(",")
+				let TFlag = true;
+				for(let n in arr){
+					if(str.indexOf(arr[n]) != -1){
+						TFlag =false;
+					}
+				}
+				if(TFlag){
+					score = score - 10;
+				}
+				
 			}
 		}
 		if(flag){
@@ -145,8 +162,8 @@ function TiMu(){
 		}
 		$(".submit").addClass("submited")
 		if($(".submit").hasClass("submited")){
-				$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
-			}
+			$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
+		}
 	});
 }
 
@@ -181,55 +198,100 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "The attitudes many of these young people had developed were both cautious and illiberal.的cautious（）",  
+             "title": "争论，辩论（）",  
             
              "xuanxiang":[
-             				"自由的",
-             				"谨慎的",
-             				"骑士",
-             				"洞穴",
+             				"quarrel",
+             				"debate",
+             				"disagreement",
+             				"dispute",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "prayer以下哪个解释是正确的",  
+             "title": "credit以下哪个不是正确的解释（）",  
             
              "xuanxiang":[
-             				"a solemn request for help or expression of thanks addressed to God or an object of worship.",
-             				"ask (someone) earnestly or humbly for something.",
-             				"say something in order to obtain an answer or some information.",
-             				"an act of asking politely or formally for something.",
+             				"借记卡",
+             				"赞扬",
+             				"信贷",
+             				"学分",
              				]
         },{  
              "id" : "3",  
-             "title": "stem from（）",  
+             "title": "imply正确的解释（）",  
             
              "xuanxiang":[
-             				"受益于",
-             				"从...推断出",
-             				"起源于",
-             				"从...听说",
+             				"strongly suggest the truth or existence of (something not expressly stated).",
+             				"make (secret or new information) known.",
+             				"make (something) visible, typically by uncovering it.",
+             				"communicate information, facts, or news to someone in spoken or written words.",
              				]
         },{  
              "id" : "4",  
-             "title": "accelerate（）",  
+             "title": "Success does not consist ______ never making mistakes but in never making the same one a second time.",  
             
              "xuanxiang":[
-             				"加快",
-             				"促进的",
-             				"油门",
-             				"可接受的",
+             				"of",
+             				"from",
+             				"in",
+             				"to",
              				]
         },{  
              "id" : "5",  
-             "title": "consume with（）",  
+             "title": "效率高的（）",  
              
              "xuanxiang":[
-             				"一起花",
-             				"随身带着钱",
-             				"用...来消费",
-             				"使着迷",
+             				"efficient",
+             				"proficient",
+             				"potential",
+             				"sufficient",
              				]
+        },{  
+             "id" : "6",  
+             "title": "promote（）",  
+             
+             "xuanxiang":[
+             				"建议",
+             				"推开",
+             				"前进，前行",
+             				"促进，推销",
+             				]
+        },{  
+             "id" : "7",  
+             "title": "string with（）",  
+             
+             "xuanxiang":[
+             				"并联",
+             				"串联",
+             				"成行地展开",
+             				"跟随",
+             				]
+        },{  
+             "id" : "8",  
+             "title": "institue（）",  
+             
+             "xuanxiang":[
+             				"幼儿园",
+             				"托儿所",
+             				"学前班",
+             				"研究院",
+             				]
+        },{  
+             "id" : "9",  
+             "title": "scale down（）",  
+             
+             "xuanxiang":[
+             				"减小规模",
+             				"降低标准",
+             				"下山",
+             				"按比例缩减",
+             				]
+        },{  
+             "id" : "10",  
+             "title": "cube: ",  
+			 "type": "input",
+             "content": ""
         }
         ];
         
