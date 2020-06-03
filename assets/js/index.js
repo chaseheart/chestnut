@@ -139,6 +139,7 @@ function TiMu(){
 				}
 				if(TFlag){
 					score = score - 10;
+					$("#" + (parseInt(i) + 1)).addClass("error");
 				}
 				
 			}
@@ -148,7 +149,7 @@ function TiMu(){
 			return false;
 		}
 		if(score == 100){
-			$.alertView("真是太棒了，100分！");
+			$.alertView("~~~~(>_<)~~~~，🍭+1！");
 			$('.holder').fireworks({ 
 				  sound: true, // sound effect
 				  opacity: 0.9, 
@@ -156,7 +157,7 @@ function TiMu(){
 				  height: '100%' 
 			});
 		}else if(score >= 60){
-			$.alertView("离100就差一点点！");
+			$.alertView("🍭减一了哦！");
 		}else if(score < 60){
 			$.alertView("加油");
 		}
@@ -164,6 +165,7 @@ function TiMu(){
 		if($(".submit").hasClass("submited")){
 			$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
 		}
+		$(".error").parent().append("<span class='blankAnswer'>(立方,正方)</span>")
 	});
 }
 

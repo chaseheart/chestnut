@@ -72,4 +72,11 @@ html,body{height:100%;}
 	border: none;
     border-bottom: 1px solid #000;
     background: transparent;
+	text-align: center;
+}
+
+.blankAnswer{
+	text-align: center;
+    width: auto;
+    color: red;
 }
