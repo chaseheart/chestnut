@@ -165,7 +165,7 @@ function TiMu(){
 		if($(".submit").hasClass("submited")){
 			$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
 		}
-		$(".error").parent().append("<span class='blankAnswer'>(立方,正方)</span>")
+		$(".error").parent().append("<span class='blankAnswer'>(gramme)</span>")
 	});
 }
 
