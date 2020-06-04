@@ -52,7 +52,7 @@ function TiMu(){
 	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":5}
 	// 答案
 	var right = {"0":2,"1":1,"2":1,"3":3,"4":1,"5":4,"6":4,"7":4,"8":4,"9":0}
-	var strRight = {"9":"立方,正方"}
+	var strRight = {"9":"gramme"}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -200,98 +200,98 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "争论，辩论（）",  
+             "title": "stroke没有以下哪个意思（）",  
             
              "xuanxiang":[
-             				"quarrel",
-             				"debate",
-             				"disagreement",
-             				"dispute",
+             				"中风",
+             				"冲击波",
+             				"划桨",
+             				"抚摸",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "credit以下哪个不是正确的解释（）",  
+             "title": "in a pinch（）",  
             
              "xuanxiang":[
-             				"借记卡",
-             				"赞扬",
-             				"信贷",
-             				"学分",
+             				"必要时，在紧急关头",
+             				"半信半疑中",
+             				"出故障",
+             				"说服",
              				]
         },{  
              "id" : "3",  
-             "title": "imply正确的解释（）",  
+             "title": "rope正确的解释（）",  
             
              "xuanxiang":[
-             				"strongly suggest the truth or existence of (something not expressly stated).",
-             				"make (secret or new information) known.",
-             				"make (something) visible, typically by uncovering it.",
-             				"communicate information, facts, or news to someone in spoken or written words.",
+             				"catch, fasten, or secure with rope.",
+             				"make an opening, incision, or wound in (something) with a sharp-edged tool or object.",
+             				"a downward cutting blow or movement, typically with the hand.",
+             				"lay hold of (something) with one's hands; reach for and hold.",
              				]
         },{  
              "id" : "4",  
-             "title": "Success does not consist ______ never making mistakes but in never making the same one a second time.",  
+             "title": "__  bulk : 大量，大批",  
             
              "xuanxiang":[
-             				"of",
-             				"from",
+             				"out",
+             				"at",
              				"in",
-             				"to",
+             				"on",
              				]
         },{  
              "id" : "5",  
-             "title": "效率高的（）",  
+             "title": "board不含有以下哪个意思（）",  
              
              "xuanxiang":[
-             				"efficient",
-             				"proficient",
-             				"potential",
-             				"sufficient",
+             				"在船(车或者飞机)上",
+             				"牌子",
+             				"董事会",
+             				"搭伙",
              				]
         },{  
              "id" : "6",  
-             "title": "promote（）",  
+             "title": "formal（）",  
              
              "xuanxiang":[
-             				"建议",
-             				"推开",
-             				"前进，前行",
-             				"促进，推销",
+             				"虚假的",
+             				"直接的",
+             				"正常的",
+             				"正式的",
              				]
         },{  
              "id" : "7",  
-             "title": "string with（）",  
+             "title": "fairy tale（）",  
              
              "xuanxiang":[
-             				"并联",
-             				"串联",
-             				"成行地展开",
-             				"跟随",
+             				"精灵",
+             				"寓言",
+             				"童话镇",
+             				"童话",
              				]
         },{  
              "id" : "8",  
-             "title": "institue（）",  
+             "title": "infer from（）",  
              
              "xuanxiang":[
-             				"幼儿园",
-             				"托儿所",
-             				"学前班",
-             				"研究院",
+             				"测度",
+             				"论断",
+             				"猜想",
+             				"根据...推断",
              				]
         },{  
              "id" : "9",  
-             "title": "scale down（）",  
+             "title": "imply的同义词（）",  
              
              "xuanxiang":[
-             				"减小规模",
-             				"降低标准",
-             				"下山",
-             				"按比例缩减",
+             				"inform",
+             				"communicate",
+             				"talk",
+             				"mean",
              				]
         },{  
              "id" : "10",  
-             "title": "cube: ",  
+             "title": "克: ",  
 			 "type": "input",
              "content": ""
         }
