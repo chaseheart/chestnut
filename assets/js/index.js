@@ -52,7 +52,7 @@ function TiMu(){
 	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":5}
 	// 答案
 	var right = {"0":2,"1":1,"2":1,"3":3,"4":1,"5":4,"6":4,"7":4,"8":4,"9":0}
-	var strRight = {"9":"gramme"}
+	var strRight = {"9":"chemist,pharmacist"}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -165,7 +165,7 @@ function TiMu(){
 		if($(".submit").hasClass("submited")){
 			$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
 		}
-		$(".error").parent().append("<span class='blankAnswer'>(gramme)</span>")
+		$(".error").parent().append("<span class='blankAnswer'>(chemist,pharmacist)</span>")
 	});
 }
 
@@ -200,38 +200,38 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "stroke没有以下哪个意思（）",  
+             "title": "conflict没有以下哪个意思（）",  
             
              "xuanxiang":[
-             				"中风",
-             				"冲击波",
-             				"划桨",
-             				"抚摸",
+             				"冲突",
+             				"对抗",
+             				"战争",
+             				"抵触",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "in a pinch（）",  
+             "title": "instruct sb. in sth./doing sth.（）",  
             
              "xuanxiang":[
-             				"必要时，在紧急关头",
-             				"半信半疑中",
-             				"出故障",
-             				"说服",
+             				"教某人某种技巧",
+             				"命令某人做某事",
+             				"指示某人做某事",
+             				"说服某人做某事",
              				]
         },{  
              "id" : "3",  
-             "title": "rope正确的解释（）",  
+             "title": "subject正确的解释（）",  
             
              "xuanxiang":[
-             				"catch, fasten, or secure with rope.",
-             				"make an opening, incision, or wound in (something) with a sharp-edged tool or object.",
-             				"a downward cutting blow or movement, typically with the hand.",
-             				"lay hold of (something) with one's hands; reach for and hold.",
+             				"cause or force to undergo (a particular experience of form of treatment).",
+             				"(of a thing) be rightly placed in a specified position.",
+             				"have as belonging to one; own.",
+             				"have (something) as one's own; possess.",
              				]
         },{  
              "id" : "4",  
-             "title": "__  bulk : 大量，大批",  
+             "title": "__  spite of : 尽管，不管",  
             
              "xuanxiang":[
              				"out",
@@ -241,57 +241,57 @@ var data1 =[ {
              				]
         },{  
              "id" : "5",  
-             "title": "board不含有以下哪个意思（）",  
+             "title": "poles apart含有以下哪个意思（）",  
              
              "xuanxiang":[
-             				"在船(车或者飞机)上",
-             				"牌子",
-             				"董事会",
-             				"搭伙",
+             				"大相径庭",
+             				"磁极",
+             				"电极",
+             				"极点",
              				]
         },{  
              "id" : "6",  
-             "title": "formal（）",  
+             "title": "appropriate（）",  
              
              "xuanxiang":[
-             				"虚假的",
-             				"直接的",
-             				"正常的",
-             				"正式的",
+             				"赞赏的",
+             				"正确的",
+             				"美好的",
+             				"适当的，恰当的",
              				]
         },{  
              "id" : "7",  
-             "title": "fairy tale（）",  
+             "title": "_____ shooter 豌豆射手",  
              
              "xuanxiang":[
-             				"精灵",
-             				"寓言",
-             				"童话镇",
-             				"童话",
+             				"Damson",
+             				"Haw",
+             				"Pit",
+             				"Pea",
              				]
         },{  
              "id" : "8",  
-             "title": "infer from（）",  
+             "title": "beyond belief（）",  
              
              "xuanxiang":[
-             				"测度",
-             				"论断",
-             				"猜想",
-             				"根据...推断",
+             				"极其信任",
+             				"至高信仰",
+             				"与生俱来",
+             				"难以置信",
              				]
         },{  
              "id" : "9",  
-             "title": "imply的同义词（）",  
+             "title": "preface的同义词（）",  
              
              "xuanxiang":[
-             				"inform",
-             				"communicate",
-             				"talk",
-             				"mean",
+             				"prose",
+             				"fable",
+             				"light novel",
+             				"introduction ",
              				]
         },{  
              "id" : "10",  
-             "title": "克: ",  
+             "title": "化学家,药剂师: ",  
 			 "type": "input",
              "content": ""
         }
