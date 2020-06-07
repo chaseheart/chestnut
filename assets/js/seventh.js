@@ -231,7 +231,7 @@ var data1 =[ {
              				]
         },{  
              "id" : "4",  
-             "title": "spit ___  厉声说出"
+             "title": "spit ___  厉声说出",
             
              "xuanxiang":[
              				"out",
