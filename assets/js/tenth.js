@@ -127,7 +127,7 @@ function TiMu(){
 				flag = true
 			}
 			if(anwser[i] != right[i] && anwser[i] != 5){
-				score = score - 10;
+				score = score - 5;
 			}else if(anwser[i] == 5){
 				let str = $("#" + (parseInt(i) + 1)).val();
 				let arr = strRight[i].split(",")
@@ -138,7 +138,7 @@ function TiMu(){
 					}
 				}
 				if(TFlag){
-					score = score - 10;
+					score = score - 5;
 					$("#" + (parseInt(i) + 1)).addClass("error");
 				}
 				
