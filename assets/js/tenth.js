@@ -97,7 +97,7 @@ function TiMu(){
 	}
 	
 	document.querySelector(".next").onclick = function(){
-		if(timu_id < 9){
+		if(timu_id < 19){
 			frame_left += -100
 			document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 			
