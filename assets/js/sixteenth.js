@@ -51,8 +51,8 @@ function TiMu(){
 	var frame_left = 0
 	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":5}
 	// 答案
-	var right = {"0":1,"1":2,"2":4,"3":3,"4":2,"5":3,"6":4,"7":1,"8":1,"9":5}
-	var strRight = {"9":"deadline"}
+	var right = {"0":1,"1":3,"2":1,"3":2,"4":2,"5":4,"6":3,"7":4,"8":3,"9":5}
+	var strRight = {"9":"interior city"}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -165,7 +165,7 @@ function TiMu(){
 		if($(".submit").hasClass("submited")){
 			$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
 		}
-		$(".error").parent().append("<span class='blankAnswer'>(deadline)</span>")
+		$(".error").parent().append("<span class='blankAnswer'>(interior city)</span>")
 	});
 }
 
@@ -200,98 +200,98 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "invest _____ 投资",  
+             "title": "in the final analysis（）",  
             
              "xuanxiang":[
-             				"in",
-             				"on",
-             				"for",
-             				"to",
+             				"归根结底，总之",
+             				"真実はいつも一つ",
+             				"最终结果",
+             				"结论",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "synthetic （）",  
+             "title": "a miracle cure （）",  
             
              "xuanxiang":[
-             				"未来的",
-             				"人造的",
-             				"迷幻的",
-             				"同步的",
+             				"催眠",
+             				"治愈系魔法",
+             				"灵丹妙药",
+             				"气功",
              				]
         },{  
              "id" : "3",  
-             "title": "Vitamins can't be manufactured by our body.",  
+             "title": "Would you like to hazard a guess?",  
             
              "xuanxiang":[
-             				"钙片不能被人体吸收。",
-             				"人体禁止炼成。",
-             				"营养素被身体排斥。",
-             				"维他命不能被人体生成。",
+             				"你想猜猜看嘛？",
+             				"你想证实下猜想嘛？",
+             				"你想提出猜测嘛？",
+             				"你想否定猜想嘛？",
              				]
         },{  
              "id" : "4",  
-             "title": "tide 没有以下哪个解释（）",
+             "title": "_____ comment 编者点评",
             
              "xuanxiang":[
-             				"趋势",
-             				"(￣︶￣)↗ 涨",
-             				"导向",
-             				"潮汐",
+             				"editable",
+             				"editorial",
+             				"edition",
+             				"editor",
              				]
         },{  
              "id" : "5",  
-             "title": "cope _____ 应付",  
+             "title": "swear _____ 宣誓，极其依赖",  
              
              "xuanxiang":[
-             				"against",
-             				"with",
+             				"in",
+             				"by",
              				"to",
              				"for",
              				]
         },{  
              "id" : "6",  
-             "title": "contour （）(ps con-意为共同 con，tour同为词根 )",  
+             "title": "tidy _____ 收起某物，放好  ",  
              
              "xuanxiang":[
-             				"转动",
-             				"拐弯",
-             				"轮廓",
-             				"旅行",
+             				"out",
+             				"by",
+             				"off",
+             				"away",
              				]
         },{  
              "id" : "7",  
-             "title": "automatic 没有以下哪个解释（）",  
+             "title": "swell 没有以下哪个解释（）",  
              
              "xuanxiang":[
-             				"自动手枪",
-             				"必然的",
-             				"无意识的",
-             				"科学的",
+             				"膨胀",
+             				"增强",
+             				"颤抖",
+             				"波浪起伏",
              				]
         },{  
              "id" : "8",  
-             "title": "______ joint 脱臼，处于混乱状态",  
+             "title": "in full swing （）",  
              
              "xuanxiang":[
-             				"out of",
-             				"against",
-             				"in ",
-             				"off",
+             				"剧情翻转",
+             				"起伏不定",
+             				"荡秋千 ",
+             				"十分活跃",
              				]
         },{  
              "id" : "9",  
-             "title": "swallow _____ 用尽（钱等）",  
+             "title": "represent 没有以下哪个解释（）",  
              
              "xuanxiang":[
-             				"up",
-             				"in",
-             				"to",
-             				"with",
+             				"象征",
+             				"描绘",
+             				"出席",
+             				"代理",
              				]
         },{  
              "id" : "10",  
-             "title": "截止时间 :  ",  
+             "title": "内地城市 :  ",  
 			 "type": "input",
              "content": ""
         }
