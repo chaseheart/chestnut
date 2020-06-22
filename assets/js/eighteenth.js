@@ -51,8 +51,8 @@ function TiMu(){
 	var frame_left = 0
 	var anwser = {"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":5}
 	// 答案
-	var right = {"0":3,"1":2,"2":2,"3":1,"4":2,"5":1,"6":3,"7":3,"8":1,"9":5}
-	var strRight = {"9":"librarian"}
+	var right = {"0":2,"1":3,"2":2,"3":1,"4":4,"5":1,"6":3,"7":1,"8":4,"9":0}
+	var strRight = {"9":"sympathize"}
 	document.querySelector(".entrance-bottom-frame").style.marginLeft = frame_left + "%"
 	document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + "/" + timu + " 题"
 	for(var i = 0;i<document.querySelectorAll(".entrance-bottom-frame-line-button").length;i++){
@@ -165,7 +165,7 @@ function TiMu(){
 		if($(".submit").hasClass("submited")){
 			$(".entrance-bottom-frame-line").eq(timu_id).find(".entrance-bottom-frame-line-button").eq(right[timu_id]-1).addClass("rightAnwser")
 		}
-		$(".error").parent().append("<span class='blankAnswer'>(librarian)</span>")
+		$(".error").parent().append("<span class='blankAnswer'>(sympathize)</span>")
 	});
 }
 
@@ -200,98 +200,98 @@ function hasClass(obj, cls){
 
 var data1 =[ {
              "id" : "1",  
-             "title": "recognition没有以下哪个解释（）",  
+             "title": "liable ____ 有法律责任的",  
             
              "xuanxiang":[
-             				"识别",
-             				"承认",
-             				"提拔",
-             				"报偿",
+             				"with",
+             				"for",
+             				"as",
+             				"in ",
              				]
 	
         },{  
              "id" : "2",  
-             "title": "poetry （）",  
+             "title": "spot 没有以下解释（）",  
             
              "xuanxiang":[
-             				"散文",
-             				"诗歌",
-             				"诗人",
-             				"赞歌",
+             				"点",
+             				"少量",
+             				"角落",
+             				"发现",
              				]
         },{  
              "id" : "3",  
-             "title": "cotton fibres",  
+             "title": "sanction（）",  
             
              "xuanxiang":[
-             				"火柴",
-             				"棉纤维",
-             				"棉制品",
-             				"食用维生素",
+             				"神圣",
+             				"制裁",
+             				"伪善",
+             				"武士",
              				]
         },{  
              "id" : "4",  
-             "title": "以下哪个英文是动漫名",
+             "title": "imitation leather（）",
             
              "xuanxiang":[
-             				"sword art online",
-             				"fate grande online",
-             				"monster hunter world",
-             				"honkai impact 3rd",
+             				"人造革",
+             				"魔术布",
+             				"皮衣",
+             				"山寨的衣服",
              				]
         },{  
              "id" : "5",  
-             "title": "switch _____ 调班",  
+             "title": "____ advantage 有利地",  
              
              "xuanxiang":[
-             				"off",
-             				"with",
-             				"out",
-             				"by",
+             				"of",
+             				"at",
+             				"in",
+             				"to",
              				]
         },{  
              "id" : "6",  
-             "title": "一万名观众（）",  
+             "title": "infant formula（）",  
              
              "xuanxiang":[
-             				"an audience of 10000",
-             				"10000 audiences",
-             				"audiences of 10000",
-             				"an 10000 audience",
+             				"婴儿配方奶粉",
+             				"奶嘴",
+             				"神童",
+             				"话剧",
              				]
         },{  
              "id" : "7",  
-             "title": "ideal ____ sb./sth. 适合",  
+             "title": "put the screw on（）",  
              
              "xuanxiang":[
-             				"in",
-             				"by", 
-             				"for",
-             				"on",
+             				"固定",
+             				"坚守",
+             				"强迫",
+             				"拧紧（瓶盖）",
              				]
         },{  
              "id" : "8",  
-             "title": "approve ____ 赞成,批准",  
+             "title": "to be precise（）",  
              
              "xuanxiang":[
-             				"in",
-             				"with",
-             				"of ",
-             				"for",
+             				"准确来说",
+             				"为了精准度",
+             				"恰好",
+             				"仓促间",
              				]
         },{  
              "id" : "9",  
-             "title": "prohibit（）",  
+             "title": "on your conscience（）",  
              
              "xuanxiang":[
-             				"formally forbid (something) by law, rule, or other authority.",
-             				"confess to be true or to be the case, typically with reluctance.",
-             				"perform a series of mechanical or chemical operations on (something) in order to change or preserve it.",
-             				"create difficulties for (someone or something), resulting in delay or obstruction.",
+             				"负责",
+             				"牵挂",
+             				"混淆",
+             				"良心不安",
              				]
         },{  
              "id" : "10",  
-             "title": "图书管理员 :  ",  
+             "title": "怜悯（vi.）: ",  
 			 "type": "input",
              "content": ""
         }
